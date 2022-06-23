@@ -28,7 +28,7 @@ async function run() {
       res.send(addTodo);
     });
     // get all Todo
-    app.get("/addTodo", async (req, res) => {
+    app.get("/addTodos", async (req, res) => {
       const result = await TodoCollection.find({}).toArray();
       res.json(result);
     });
