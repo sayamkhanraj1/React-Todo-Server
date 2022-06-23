@@ -33,7 +33,7 @@ async function run() {
       res.json(result);
     });
     //delete task
-     app.delete("/addTodo/:id", async (req, res) => {
+     app.delete("/addTodos/:id", async (req, res) => {
        const id = req.params.id;
        const query = { _id: ObjectId(id) };
        const result = await TodoCollection.deleteOne(query);
