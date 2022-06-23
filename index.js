@@ -32,6 +32,9 @@ async function run() {
       const result = await TodoCollection.find({}).toArray();
       res.json(result);
     });
+    app.get("/abc", async (req, res) => {
+      res.send('helooo world')
+    })
     //delete task
      app.delete("/addTodos/:id", async (req, res) => {
        const id = req.params.id;
